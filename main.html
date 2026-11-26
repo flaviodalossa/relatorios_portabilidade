@@ -28,16 +28,20 @@
     li + li { border-top: 1px solid var(--line); }
     h3 { margin: 0; font-size: 1rem; line-height: 1.45; font-weight: 650; }
     li p { margin: .22rem 0 0; font-size: .88rem; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: .5rem; }
     li a {
-      display: inline-flex; align-items: center; gap: .55rem; justify-self: start;
+      display: inline-flex; align-items: center; gap: .55rem;
       padding: .55rem .75rem; min-height: 2.75rem; color: var(--accent); background: #ecf6f0;
       border: 1px solid #cce2d8; border-radius: .45rem; text-decoration: none; font-size: .9rem; font-weight: 700;
     }
+    li a[download] { background: #fff; }
     li a:hover { background: #dcefe4; text-decoration: underline; }
     li a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    @media (max-width: 38rem) {
+      li { grid-template-columns: minmax(0, 1fr); }
+    }
     @media (max-width: 30rem) {
       header { padding-block: 2.5rem; }
-      li { grid-template-columns: minmax(0, 1fr); }
     }
   </style>
 </head>
@@ -50,49 +54,67 @@
   </header>
   <main>
     <section class="container" aria-labelledby="documentos">
-      <h2 id="documentos">Documentos para download</h2>
+      <h2 id="documentos">Documentos em PDF</h2>
       <ul role="list">
         <li>
           <div>
             <h3>Relatório de portabilidade</h3>
             <p>PDF <span aria-hidden="true">·</span> 56 KB</p>
           </div>
-          <a href="relatorio_portabilidade.pdf" download aria-label="Baixar PDF: Relatório de portabilidade">Baixar PDF <span aria-hidden="true">↓</span></a>
+          <div class="actions">
+            <a href="relatorio_portabilidade.pdf" target="_blank" rel="noopener" aria-label="Visualizar PDF do Relatório de portabilidade (nova aba)">Visualizar PDF <span aria-hidden="true">↗</span></a>
+            <a href="relatorio_portabilidade.pdf" download aria-label="Baixar PDF: Relatório de portabilidade">Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
         </li>
         <li>
           <div>
             <h3>Comparação dos cenários de portabilidade</h3>
             <p>PDF <span aria-hidden="true">·</span> 416 KB</p>
           </div>
-          <a href="comparacao_cenarios_portabilidade_20261013.pdf" download aria-label="Baixar PDF: Comparação dos cenários de portabilidade">Baixar PDF <span aria-hidden="true">↓</span></a>
+          <div class="actions">
+            <a href="comparacao_cenarios_portabilidade_20261013.pdf" target="_blank" rel="noopener" aria-label="Visualizar PDF da Comparação dos cenários de portabilidade (nova aba)">Visualizar PDF <span aria-hidden="true">↗</span></a>
+            <a href="comparacao_cenarios_portabilidade_20261013.pdf" download aria-label="Baixar PDF: Comparação dos cenários de portabilidade">Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
         </li>
         <li>
           <div>
             <h3>Cenário de quatro faixas por quantis</h3>
             <p>PDF <span aria-hidden="true">·</span> 1,8 MB</p>
           </div>
-          <a href="cenario_quatro_faixas_quantils_20261013.pdf" download aria-label="Baixar PDF: Cenário de quatro faixas por quantis">Baixar PDF <span aria-hidden="true">↓</span></a>
+          <div class="actions">
+            <a href="cenario_quatro_faixas_quantils_20261013.pdf" target="_blank" rel="noopener" aria-label="Visualizar PDF do Cenário de quatro faixas por quantis (nova aba)">Visualizar PDF <span aria-hidden="true">↗</span></a>
+            <a href="cenario_quatro_faixas_quantils_20261013.pdf" download aria-label="Baixar PDF: Cenário de quatro faixas por quantis">Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
         </li>
         <li>
           <div>
             <h3>Cenário de cinco faixas por quantis</h3>
             <p>PDF <span aria-hidden="true">·</span> 2,0 MB</p>
           </div>
-          <a href="cenario_cinco_faixas_quantils_20261013.pdf" download aria-label="Baixar PDF: Cenário de cinco faixas por quantis">Baixar PDF <span aria-hidden="true">↓</span></a>
+          <div class="actions">
+            <a href="cenario_cinco_faixas_quantils_20261013.pdf" target="_blank" rel="noopener" aria-label="Visualizar PDF do Cenário de cinco faixas por quantis (nova aba)">Visualizar PDF <span aria-hidden="true">↗</span></a>
+            <a href="cenario_cinco_faixas_quantils_20261013.pdf" download aria-label="Baixar PDF: Cenário de cinco faixas por quantis">Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
         </li>
         <li>
           <div>
             <h3>Simulação da categoria mínima de destino nacional</h3>
             <p>PDF <span aria-hidden="true">·</span> 802 KB</p>
           </div>
-          <a href="simulacao_categoria_destino_minima_nacional_20261014.pdf" download aria-label="Baixar PDF: Simulação da categoria mínima de destino nacional">Baixar PDF <span aria-hidden="true">↓</span></a>
+          <div class="actions">
+            <a href="simulacao_categoria_destino_minima_nacional_20261014.pdf" target="_blank" rel="noopener" aria-label="Visualizar PDF da Simulação da categoria mínima de destino nacional (nova aba)">Visualizar PDF <span aria-hidden="true">↗</span></a>
+            <a href="simulacao_categoria_destino_minima_nacional_20261014.pdf" download aria-label="Baixar PDF: Simulação da categoria mínima de destino nacional">Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
         </li>
         <li>
           <div>
             <h3>Comparação dos perfis do Guia de Portabilidade</h3>
             <p>PDF <span aria-hidden="true">·</span> 1,6 MB</p>
           </div>
-          <a href="comparacao_perfis_guia_20261016.pdf" download aria-label="Baixar PDF: Comparação dos perfis do Guia de Portabilidade">Baixar PDF <span aria-hidden="true">↓</span></a>
+          <div class="actions">
+            <a href="comparacao_perfis_guia_20261016.pdf" target="_blank" rel="noopener" aria-label="Visualizar PDF da Comparação dos perfis do Guia de Portabilidade (nova aba)">Visualizar PDF <span aria-hidden="true">↗</span></a>
+            <a href="comparacao_perfis_guia_20261016.pdf" download aria-label="Baixar PDF: Comparação dos perfis do Guia de Portabilidade">Baixar PDF <span aria-hidden="true">↓</span></a>
+          </div>
         </li>
       </ul>
     </section>
